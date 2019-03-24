@@ -1,3 +1,6 @@
 # USB_RTC
 
-sudo apt-get -y install ntp
+#### ntplib
+https://pypi.org/project/ntplib/#files
+sudo python3 setup.py install
+
