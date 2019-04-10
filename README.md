@@ -13,7 +13,7 @@ Elektor Labs (schematic): https://www.elektormagazine.fr/labs/usbrtc-for-raspber
 ![Carte electronic](USB-RTC.png)
 The USB KEY
 
-![ProgramPC](USB-RTC-Program-PC.png)
+![ProgramPC](USB-RTC-program-PC.png)
 
 * Program PC is ready
 
