@@ -1,21 +1,33 @@
-# USB_RTC
+# USB/RTC for Raspberry PI
 
-# In Progress (31/03/2019)
+The Raspberry Pi is able to synchronize time via internet or with a small card connected to its pins. This project is a USB key with a clock circuit that keeps the time of your Raspberry Pi. The project describes the necessary updates and the program in Python 3 to set the time at startup and anytime you want.
+
+# In Progress (10/04/2019)
 
 
 Project Elektor Magazine
 (will be published in late 2019)
 
-![Carte electronic](USB-RTC.png)
+Elektor Labs (schematic): https://www.elektormagazine.fr/labs/usbrtc-for-raspberry-pi
 
-![ProgramPC](ProgramPC.png)
+![Carte electronic](USB-RTC.png)
+The USB KEY
+
+![ProgramPC](USB-RTC-Program-PC.png)
+
+* Program PC is ready
+
+* Program Raspberry Pi is in progress
 
 contact : [Jennifer AUBINAIS](mailto:jennifer@aubinais.net) 
 
 
-##Annexe :
+# Annexe 1 :
 
-#### ntplib
+
+__install ntplib :__
+
 https://pypi.org/project/ntplib/#files
+
 sudo python3 setup.py install
 
