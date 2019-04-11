@@ -7,8 +7,6 @@ CurrentFile = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(CurrentFile + "/JAUSBRTC")
 from JAUSBRTC import JAUSBRTC
 #################################
-print(strftime("%H:%M:%S", time.localtime()))
-print(strftime("%d  %b", time.localtime()))
 print('MCP2221A and MCP7490N')
 print('=====================')
 print('Set Time and Date')
@@ -34,7 +32,7 @@ Freturn = -1
 #################################
 if len(sys.argv) == 2: # Time -- Date -- FROM (from the Raspberry Pi time)
     if str(sys.argv[1]) == 'FROM':
-        Freturn = mcpUsbRtc.UpdateFrom(True)
+        Freturn = mcpUsbRtc.UpdateFrom()
     else:
         mcpUsbRtc = JAUSBRTC()
         if ':' in str(sys.argv[1]):
@@ -81,14 +79,7 @@ if Freturn == -1:
 	print('ERROR')
 #################################	
 mcpUsbRtc = JAUSBRTC()
-print(mcpUsbRtc.GetTime(False))
-print(mcpUsbRtc.GetDate(False))
+print(mcpUsbRtc.GetTime())
+print(mcpUsbRtc.GetDate())
 #################################
 
-
-
-
-
-#print (sys.argv[0]) #Affiche monfichier.py
-#print (sys.argv[1]) #Affiche toto
-#print (3 + sys.argv[2]) #Affiche 15
