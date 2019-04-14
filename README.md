@@ -22,12 +22,10 @@ The USB KEY
 contact : [Jennifer AUBINAIS](mailto:jennifer@aubinais.net) 
 
 
-# Annexe 1 :
+# Installation :
 
-
-__install ntplib :__
-
-https://pypi.org/project/ntplib/#files
-
-sudo python3 setup.py install
+- copy [install.sh](https://github.com/jenniferaubinais/USB_RTC/blob/master/RaspberryPi/install.sh) to your Raspberry Pi (/home/pi/)
+- sudo chmod 777 install.sh
+- sudo ./install.sh
+ 
 

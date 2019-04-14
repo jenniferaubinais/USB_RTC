@@ -17,6 +17,7 @@ def main(argv):
     print()
     #################################
     myNTPInternet = JANTPInternet()
+    #
     #if myNTPInternet.testNTPInternet():
     #    exit()
     #################################
@@ -33,7 +34,9 @@ def main(argv):
     if isinstance(stTime, str):
         stDate = mcpUsbRtc.GetDate()  
         if isinstance(stDate, str):
-            stDateTime = stTime + " " + stDate
+            stDateSplit = stDate.split('/')
+            stDateTime = stDateSplit[2] + "-" + stDateSplit[1] + "-"
+            stDateTime += stDateSplit[0] + " " + stTime
             print()
             try:
                 subprocess.call(shlex.split("sudo date -s '%s'" % stDateTime))
