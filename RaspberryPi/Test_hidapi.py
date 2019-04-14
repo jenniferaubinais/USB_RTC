@@ -1,4 +1,4 @@
-#####################################
+######################################
 #    (c) Jennifer AUBINAIS          #
 #   Check hid and found MCP2221 key #
 #####################################
@@ -9,17 +9,9 @@ for d in hid.enumerate(0x04D8, 0x00DD):
     for key in keys:
         count = count +1
 if (count == 0):
-    print("#####################################")
-    print("#             Test HIDAPI           #")
-    print("# ERROR : MCP2221 key not connected #")
-    print("#####################################")
     exit(1)
 mcp2221a = hid.device()
 try:
-    mcp2221a.open_path(hid.enumerate(0x04D8, 0x00DD)[0]["path"])
+    mcp2221a.open_path(hid.enumerate(0x0488, 0x00DD)[0]["path"])
 except:
-    print("#################################")
-    print("#           Test HIDAPI         #")
-    print("# ERROR : MCP2221 key not found #")
-    print("#################################")
-    exit(1)
+    exit(2)
