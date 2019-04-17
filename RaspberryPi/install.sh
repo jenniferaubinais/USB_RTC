@@ -202,7 +202,8 @@ echo "###############"
 echo "#########################"
 echo "# Insert Update at boot #"
 echo "#########################"
-sudo python3 ./USB-RTC-Key/complements/insert_autostart.py > /dev/null
+mkdir -vp /home/pi/.config/autostart
+sudo cp -rf /home/pi/USB-RTC-Key/complements/usbrtc.desktop /home/pi/.config/autostart > /dev/null
 ###
 echo
 echo "##########################"
