@@ -167,12 +167,6 @@ echo "##################"
 echo "# Install ntplib #"
 echo "##################"
 sudo pip3 install ntplib > /dev/null
-echo "##########################"
-echo "# compiling libmcp2221 # #"
-echo "##########################"
-cd libmcp2221/libmcp2221/
-make > /dev/null
-cd /home/pi/
 ###
 echo "###########################"
 echo "# connect the USB RTC Key #"
@@ -202,7 +196,7 @@ echo "###############"
 echo "#########################"
 echo "# Insert Update at boot #"
 echo "#########################"
-mkdir -vp /home/pi/.config/autostart
+mkdir -vp /home/pi/.config/autostart > /dev/null
 sudo cp -rf /home/pi/USB-RTC-Key/complements/usbrtc.desktop /home/pi/.config/autostart > /dev/null
 ###
 echo
